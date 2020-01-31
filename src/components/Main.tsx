@@ -1,13 +1,13 @@
 import React from "react";
 import PlayGround from "./PlayGround";
-import { ISwapState } from "../state/ducks/swap/types";
+import { IPostState } from "../state/ducks/post/types";
 
 export interface MainDispatchProps {
   goNextStep: () => void;
   goBackStep: () => void;
 }
 
-interface Props extends ISwapState, MainDispatchProps { }
+interface Props extends IPostState, MainDispatchProps { }
 
 const Main: React.FC<Props> = (props: Props) => {
   return (

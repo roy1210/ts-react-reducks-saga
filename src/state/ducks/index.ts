@@ -1,17 +1,17 @@
 import { combineReducers } from "redux";
 import { fork, all } from "redux-saga/effects";
-import { ISwapState } from "./swap/types";
-import { swapReducer } from "./swap/reducers";
-import swapSaga from "./swap/sagas";
+import { IPostState } from "./post/types";
+import { postReducer } from "./post/reducers";
+import postSaga from "./post/sagas";
 
 export interface IApplicationState {
-  swap: ISwapState;
+  post: IPostState;
 }
 
 export const rootReducer = combineReducers<IApplicationState>({
-  swap: swapReducer
+  post: postReducer
 });
 
 export function* rootSaga() {
-  yield all([fork(swapSaga)]);
+  yield all([fork(postSaga)]);
 }

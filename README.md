@@ -1,8 +1,8 @@
 # Boilerplate of Redux architecture for React Projects with Redux-Saga and TypeScript
 
-Ref: https://itnext.io/scalable-redux-architecture-for-react-projects-with-redux-saga-and-typescript-f6afe1dece9b
-
 This repository is a boilerplate kit for Redux architecture for React Projects with Redux-Saga and TypeScript.
+
+[ref](https://itnext.io/scalable-redux-architecture-for-react-projects-with-redux-saga-and-typescript-f6afe1dece9b)
 
 ## Environment
 

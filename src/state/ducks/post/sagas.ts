@@ -5,7 +5,7 @@ import { get, post } from "../../../utils/apiClient";
 // import { monitorTx } from "../../../utils/wsClient";
 import { IApplicationState } from "../index";
 import { goNextStep } from "./actions";
-import * as SwapActionTypes from "./types";
+import * as postActionTypes from "./types";
 
 /**
  * Called when a user inputs sending amount.
@@ -21,12 +21,12 @@ import * as SwapActionTypes from "./types";
 function* handleNextActionButton(
   action: ReturnType<typeof goNextStep>
 ): Generator {
-  const step = yield select(({ swap }: IApplicationState) => swap.step);
+  const step = yield select(({ post }: IApplicationState) => post.step);
   if (step === 2) {
     console.log("It is step 2!!");
   }
 }
 
-export default function* swapSaga() {
-  yield all([takeLatest(SwapActionTypes.GO_NEXT_STEP, handleNextActionButton)]);
+export default function* postSaga() {
+  yield all([takeLatest(postActionTypes.GO_NEXT_STEP, handleNextActionButton)]);
 }

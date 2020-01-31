@@ -5,10 +5,10 @@ import { IApplicationState } from "../state/ducks";
 import {
   goNextStep,
   goBackStep,
-} from "../state/ducks/swap/actions";
+} from "../state/ducks/post/actions";
 import Main from "../components/Main";
 
-const mapStateToProps = ({ swap }: IApplicationState) => ({ ...swap });
+const mapStateToProps = ({ post }: IApplicationState) => ({ ...post });
 
 const mapDispatchToProps = (dispatch: Dispatch) => ({
   goNextStep: () => {

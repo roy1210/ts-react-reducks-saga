@@ -1,18 +1,18 @@
 import { ActionType, getType } from "typesafe-actions";
 import * as actions from "./actions";
-import { ISwapState } from "./types";
+import { IPostState } from "./types";
 
-export const initialState: ISwapState = {
+export const initialState: IPostState = {
   step: 1,
   error: null
 };
 
-export type SwapAction = ActionType<typeof actions>;
+export type postAction = ActionType<typeof actions>;
 
-export const swapReducer = (
-  state: ISwapState = initialState,
-  action: SwapAction
-): ISwapState => {
+export const postReducer = (
+  state: IPostState = initialState,
+  action: postAction
+): IPostState => {
   switch (action.type) {
     case getType(actions.goNextStep): {
       const nextStep = state.step + 1;
