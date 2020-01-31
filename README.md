@@ -1,44 +1,53 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Boilerplate of Redux architecture for React Projects with Redux-Saga and TypeScript
 
-## Available Scripts
+Ref: https://itnext.io/scalable-redux-architecture-for-react-projects-with-redux-saga-and-typescript-f6afe1dece9b
 
-In the project directory, you can run:
+This repository is a boilerplate kit for Redux architecture for React Projects with Redux-Saga and TypeScript.
 
-### `yarn start`
+## Environment
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+```bash
+$ node -v
+v10.17.0
+$ yarn -v
+v1.19.2
+```
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+- React: `16.12.0`
+- TypeScript: `3.7.2`
 
-### `yarn test`
+## Dependencies
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### For Application
 
-### `yarn build`
+- [redux](https://github.com/reduxjs/redux), [react-redux](https://github.com/reduxjs/react-redux)
+  - Redux.
+- [redux-saga](https://github.com/redux-saga/redux-saga)
+  - An alternative side effect model for Redux app. This hooks Redux action in the middleware, which allows asynchronous operations.
+- [typesafe-actions](https://github.com/piotrwitek/typesafe-actions)
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+  - Typesafe utilities for `action-creators` in Redux.
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+### For Development
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- [typescript-eslint](https://github.com/typescript-eslint/typescript-eslint)
+  - TypeScript ESLint.
+- [enzyme, enzyme-adapter-react-16](https://github.com/airbnb/enzyme)
+  - JavaScript testing utilities for React Components' output.
+- [redux-saga-test-plan](https://github.com/jfairbank/redux-saga-test-plan)
+  - Redux Saga testing utilities.
+- [redux-logger](https://github.com/LogRocket/redux-logger)
+  - Logger for Redux.
 
-### `yarn eject`
+## How To Use
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+```bash
+$ yarn
+$ yarn start
+```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## ESLint
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+This project is using [TypeScript ESLint](https://github.com/typescript-eslint/typescript-eslint). When you push your branch to remote ones, please run `yarn lint --fix` to comply to the code convention.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+When you add a new library, please make sure its license is not [GPL](https://en.wikipedia.org/wiki/GNU_General_Public_License). And please use `-D` for @types.
