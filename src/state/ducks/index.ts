@@ -1,17 +1,22 @@
 import { combineReducers } from "redux";
 import { fork, all } from "redux-saga/effects";
-import { IPostState } from "./post/types";
-import { postReducer } from "./post/reducers";
-import postSaga from "./post/sagas";
+import { IMainState } from "./main/types";
+import { IRestState } from "./rest/types";
+import { mainReducer } from "./main/reducers";
+import mainSaga from "./main/sagas";
+import restSaga from "./rest/sagas";
+import { restReducer } from "./rest/reducers";
 
 export interface IApplicationState {
-  post: IPostState;
+  main: IMainState;
+  rest: IRestState;
 }
 
 export const rootReducer = combineReducers<IApplicationState>({
-  post: postReducer
+  main: mainReducer,
+  rest: restReducer
 });
 
 export function* rootSaga() {
-  yield all([fork(postSaga)]);
+  yield all([fork(mainSaga), fork(restSaga)]);
 }

@@ -4,7 +4,7 @@ This repository is a boilerplate kit for Redux architecture for React Projects w
 
 [ref](https://itnext.io/scalable-redux-architecture-for-react-projects-with-redux-saga-and-typescript-f6afe1dece9b)
 
-## Environment
+## **Environment**
 
 ```bash
 $ node -v

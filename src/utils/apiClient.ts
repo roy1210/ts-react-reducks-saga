@@ -49,10 +49,10 @@ export const get = async <T>(
 const headers = new Headers();
 headers.append("Content-Type", "application/json");
 
-export const post = async <T>(
+export const main = async <T>(
   path: string,
   body: any,
-  args: RequestInit = { method: "post", headers, body: JSON.stringify(body) }
+  args: RequestInit = { method: "main", headers, body: JSON.stringify(body) }
 ): Promise<IHttpResponse<T>> => {
   return await http<T>(new Request(path, args));
 };

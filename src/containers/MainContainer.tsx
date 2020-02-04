@@ -1,14 +1,13 @@
-import React from "react";
 import { Dispatch } from "redux";
 import { connect } from "react-redux";
 import { IApplicationState } from "../state/ducks";
 import {
   goNextStep,
   goBackStep,
-} from "../state/ducks/post/actions";
-import Main from "../components/Main";
+} from "../state/ducks/main/actions";
+import Main from "../components/MainPage/Main";
 
-const mapStateToProps = ({ post }: IApplicationState) => ({ ...post });
+const mapStateToProps = ({ main }: IApplicationState) => ({ ...main });
 
 const mapDispatchToProps = (dispatch: Dispatch) => ({
   goNextStep: () => {
