@@ -10,7 +10,7 @@ const PlayGround: React.FC<Props> = (props: Props) => {
   return (
     <div>
       <div>
-        <h1>Hello React Redux-saga and TypeScript World</h1>
+        <h1>Hello World: React, Redux-saga, and TypeScript</h1>
         <h1>step</h1>
         {props.step}
       </div>

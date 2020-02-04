@@ -20,13 +20,15 @@ store.runSaga(rootSaga);
 const App: React.FC = () => {
   return (
     <Provider store={store}>
-      <Router>
-        <Header />
-        <Switch>
-          <Route exact path="/" component={MainContainer} />
-          <Route exact path="/rest" component={RESTContainer} />
-        </Switch>
-      </Router>
+      <div className="m-2">
+        <Router>
+          <Header />
+          <Switch>
+            <Route exact path="/" component={MainContainer} />
+            <Route exact path="/rest" component={RESTContainer} />
+          </Switch>
+        </Router>
+      </div>
     </Provider>
   );
 }

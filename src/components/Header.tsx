@@ -7,14 +7,19 @@ export const Header: React.FC<Props> = () => {
   const rest = "/rest";
   const main = "/";
   return (
-    <>
+    <div className="mb-2">
       <Link to={main}>
-        <button>Main</button>
+        <button className="mr-2">
+          Main
+        </button>
       </Link>
+
       <Link to={rest}>
-        <button>rest</button>
+        <button className="mr-2">
+          Rest
+        </button>
       </Link>
-    </>
+    </div>
   );
 };
 
