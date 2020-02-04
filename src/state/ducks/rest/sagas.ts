@@ -1,7 +1,9 @@
+import { IApplicationState } from "./../index";
 import { fetchArticlesAsync } from "./actions";
 import { all, call, put, select, takeLatest } from "redux-saga/effects";
 import { get } from "../../../utils/apiClient";
 import * as restActionTypes from "./types";
+import { restReducer } from "./reducers";
 
 /**
  * Calls API.

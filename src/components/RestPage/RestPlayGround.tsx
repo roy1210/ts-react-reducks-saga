@@ -4,11 +4,12 @@ import { IFetchArticles } from '../../state/ducks/rest/types';
 import Pagination from './Pagination';
 
 interface Props {
+  isLoading: boolean;
   fetchArticlesAsync: () => void;
   posts: IFetchArticles | [];
 }
 const RestPlayGround: React.FC<Props> = (props: Props) => {
-  const { posts, fetchArticlesAsync } = props
+  const { isLoading, posts, fetchArticlesAsync } = props
 
   useEffect(() => { fetchArticlesAsync() }, [])
 
@@ -25,7 +26,7 @@ const RestPlayGround: React.FC<Props> = (props: Props) => {
 
   return (
     <>
-      <Posts posts={currentPosts} isLoading={false} />
+      <Posts posts={currentPosts} isLoading={isLoading} />
       <Pagination
         postsPerPage={postsPerPage}
         totalPosts={posts.length}
