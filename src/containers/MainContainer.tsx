@@ -1,10 +1,7 @@
 import { Dispatch } from "redux";
 import { connect } from "react-redux";
 import { IApplicationState } from "../state/ducks";
-import {
-  goNextStep,
-  goBackStep,
-} from "../state/ducks/main/actions";
+import { goNextStep, goBackStep } from "../state/ducks/main/actions";
 import Main from "../components/MainPage/Main";
 
 const mapStateToProps = ({ main }: IApplicationState) => ({ ...main });

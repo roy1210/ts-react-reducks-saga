@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-interface Props { }
+interface Props {}
 
 export const Header: React.FC<Props> = () => {
   const rest = "/rest";
@@ -9,15 +9,11 @@ export const Header: React.FC<Props> = () => {
   return (
     <div className="mb-2">
       <Link to={main}>
-        <button className="mr-2">
-          Main
-        </button>
+        <button className="mr-2">Main</button>
       </Link>
 
       <Link to={rest}>
-        <button className="mr-2">
-          Rest
-        </button>
+        <button className="mr-2">Rest</button>
       </Link>
     </div>
   );
